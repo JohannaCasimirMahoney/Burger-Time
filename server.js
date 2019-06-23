@@ -3,20 +3,21 @@
 var express = require("express");
 var bodyParser = require("body-parser");
 
+var PORT = process.env.PORT || 8080;
+
 var app = express();
-var PORT = process.env.PORT || 3000;
 
 // Static for the app from the "public" directory in app directory
 app.use(express.static("public"));
 
 // Parse appliction body as JSON
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 
 // Set Handlebars.
 var exphbs = require("express-handlebars");
 
-app.engine("handlers", exphbs({ defaultLayout: "main" }));
+app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
 // Import routes and give the server access to them
@@ -27,4 +28,4 @@ app.use(routes);
 app.listen(PORT, function() {
      // Log (server-side) when our server has started
     console.log("Server listening on: http://localhost:" + PORT);
-})
+});
