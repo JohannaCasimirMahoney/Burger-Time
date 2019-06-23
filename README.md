@@ -7,6 +7,7 @@ It's Burger Time! Eat-Da-Burger is a restaurant application that lets users inpu
 
 
 ### <a href="screenshot.png">Play Bamazon-MySQL Demo</a>
+### (https://github.com/JohannaCasimirMahoney/Burger-Time/blob/master/screenshot.png Screenshot")
 
 ### App Setup
 
