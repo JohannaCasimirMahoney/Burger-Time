@@ -1,47 +1,25 @@
-<div class="jumbotron header-bg"> 
-    {{!-- #fac126; --}}
-    <h1>Eat-Da-Burger</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="jumbotron">
+  <h1 class="display-4">Hello, world!</h1>
+  <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+  <hr class="my-4">
+  <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+  <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
 </div>
-<div class="container">
-    <div class="row">
-        <div class="col-lg-4">
-            <h2 class="header">Burgers to Devour</h2>
-            {{#each burgers}}
-                {{#unless this.devoured}}
-                    <form action="/burgers/update/{{this.id}}?_method=PUT" method="POST">
-                        <div class="form-group">
-                            <ul>
-                                <li>
-                                    <button type="submit" name="devoured" value="1" class="btn btn-mustard">{{burger_name}}</button>
-                                </li>
-                            </ul>
-                        </div>
-                    </form>
-                {{/unless}}
-            {{/each}}
-        </div>
-        <div class="col-lg-4 text-center">
-            <img class="mb-3" src="assets/img/burger.png">
-            <form action="/burgers/create" method="POST">
-                <div class="form-group">
-                    <input type="text" name="burger_name" class="form-control text-center" maxlength="50" placeholder="Enter Burger Name">
-                    <button class="btn btn-ketchup btn-block my-2" type="submit">Add Burger</button>
-                </div>
-            </form>
-        </div>
-        <div class="col-lg-4">
-            <h2 class="header">Burgers Devoured</h2>
-            {{#each burgers}}
-                {{#if this.devoured}}
-                    <div>
-                        <ul>
-                            <li>
-                                <button disabled class="btn btn-mustard">{{burger_name}}</button>
-                            </li>
-                        </ul>
-                    </div>
-                {{/if}}
-            {{/each}}
-        </div>
-    </div>
-</div>
+    
+</body>
+</html>
+
+
+
+
+
