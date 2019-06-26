@@ -17,11 +17,12 @@ router.get("/", function(req, res) {
 
 // This creates a new burger to the db
 
-router.post("/api/burgers", function (req, res) {
-    burger.insertOne(["burger_name", "devoured"], [req.body.burger_name, req.body.devoured], function(results) {
-        res.json({ id: results.insertId });
+router.post("/", function(req,res) {
+    burger.insertOne("burger_name", req.body.name, function() {
+        res.redirect("/");
     });
 });
+
 
 router.put("/api/burger/:id", function(req,res) {
     var condition = "id = " + req.params.id;
@@ -37,21 +38,6 @@ router.put("/api/burger/:id", function(req,res) {
     });
 });
 
-// This will delete the burger from the db.
 
-// router.delete("/api/burgers/:id", function(req,res) {
-//     var condition = "id = " + req.params.id;
-//     console.log("condition", condition);
-
-//     // If no rows were changed, then the ID must not exist, so 404
-//     burger.deleteOne(condition, function(result) {
-//         if (result.changedRows == 0) {
-//             return res.status(404).end();
-
-//         }else {
-//             res.status(200).end();
-//         }
-//     });
-// });
 
 module.exports = router;
