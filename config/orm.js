@@ -1,9 +1,8 @@
-// Connection, config
-var connection = require("../config/connection.js");
+// Connection, and functions that takes in the commands to SQL.
+var connection = require("./connection.js");
 
+// This helper the function for SQL syntax
 
-
-This helper the function for SQL syntax
 function printQuestionMarks(num) {
     var arr = [];
 
@@ -14,32 +13,23 @@ function printQuestionMarks(num) {
 }
 
 // Hellper function to convert object key/vaule pairs to SQL syntax
+
 function objToSql(ob) {
     var arr = [];
+// loop through the keys and push the key/value as a string int arr
 
-    // loop through the keys and push the key/value as a string int arr
     for (var key in ob) {
-        var value = ob[key];
-        // check to skip hidden properties
-        if (Object.hasOwnProperty.call(ob,key)) {
-        // If string with spaces, add quotations (Lana Del Grey => 'Lana Del Grey')
-        if (typeof value === "string" && value.indexOf(" ") >= 0) {
-            value = "'" + value + "'";
-        }
-        // e.g. {name: 'Lana Del Grey'} => ["name='Lana Del Grey'"]
-       // e.g. {sleepy: true} => ["sleepy=true"]
-       arr.push(key + "=" + value);
-        }
+      arr.push(key + "=" + ob[key]);
     }
 
-    // Translate array of strings to a single comma-separated string
     return arr.toString();
 }
 
 // Object for all SQL statement functions.
+
 var orm = {
-    selectAll: function(table, cb) {
-        var queryString = "SELECT * FROM " + table + ";";
+    all: function(tableInput, cb) {
+        var queryString = "SELECT * FROM " + tableInput + ";";
         connection.query(queryString, function(err, result) {
             if (err) {
                 throw err;
@@ -47,8 +37,11 @@ var orm = {
             cb(result);
         });
     },
-    insertOne: function(table, cols, vals, cb) {
+
+      // Create burger
+      create: function(table, cols, vals, cb) {
         var queryString = "INSERT INTO " + table;
+
         queryString += " (";
         queryString += cols.toString();
         queryString += ") ";
@@ -66,8 +59,8 @@ var orm = {
             cb(result);
         });
     },
-    // Update and burger devoured status set to true.
-    updateOne: function(table, obJColVals, condition, cb) {
+    // Update burger
+    update: function(table, obJColVals, condition, cb) {
         var queryString = "UPDATE " + table;
 
         queryString += " SET ";
@@ -84,7 +77,7 @@ var orm = {
             cb(result);
         });
 
-    },
+    }
 };
 
-Export the orm object
+module.exports = orm;
