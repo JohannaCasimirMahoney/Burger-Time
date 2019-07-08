@@ -1,7 +1,9 @@
 // Connection, config
 var connection = require("../config/connection.js");
 
-// This helper the function for SQL syntax
+
+
+This helper the function for SQL syntax
 function printQuestionMarks(num) {
     var arr = [];
 
@@ -85,5 +87,4 @@ var orm = {
     },
 };
 
-// Export the orm object
-module.exports = orm;
+Export the orm object
