@@ -7,7 +7,6 @@ var app = express();
 // Static for the app from the "public" directory in app directory
 app.use(express.static("public"));
 
-// Parse appliction body as JSON
 app.use(express.urlencoded({ extended: true}));
 app.use(express.json());
 
