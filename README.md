@@ -6,12 +6,10 @@ It's Burger Time! Eat-Da-Burger is a restaurant application that lets users inpu
 * Each burger in the waiting area also has a `Devour it!` button. When the user clicks it, the burger will move to the right side of the page. The application will store every burger in a database, whether devoured or not.
 
 
-<p align="center">
   <img width="300" height="200" src="https://github.com/JohannaCasimirMahoney/Burger-Time/blob/master/Screen%20Shot%202.png">
-</p>
-<p align="center">
+
   <img width="300" height="200" src="https://github.com/JohannaCasimirMahoney/Burger-Time/blob/master/Screen%20Shot%203.png">
-</p>
+
 
 ### App Setup
 
