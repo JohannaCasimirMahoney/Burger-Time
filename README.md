@@ -7,15 +7,11 @@ It's Burger Time! Eat-Da-Burger is a restaurant application that lets users inpu
 
 
 <p align="center">
-  <img width="460" height="300" src="https://github.com/JohannaCasimirMahoney/Burger-Time/blob/master/Screen%20Shot%202.png">
+  <img width="300" height="200" src="https://github.com/JohannaCasimirMahoney/Burger-Time/blob/master/Screen%20Shot%202.png">
 </p>
 <p align="center">
-  <img width="460" height="300" src="https://github.com/JohannaCasimirMahoney/Burger-Time/blob/master/Screen%20Shot%203.png">
+  <img width="300" height="200" src="https://github.com/JohannaCasimirMahoney/Burger-Time/blob/master/Screen%20Shot%203.png">
 </p>
-
-
-### ![Screenshot of localhost]  ()
-
 
 ### App Setup
 
