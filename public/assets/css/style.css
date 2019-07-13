@@ -1,10 +1,91 @@
 * {
 	text-align: center;
 }
-body{
+
+
+   .form-control:disabled, .form-control[readonly] {
+	   background-color: rgb(246, 248, 245);    
+   }
+
+
+   body {
+	width: 99%;
+	height: 900px;
 	background-color: rgb(8, 51, 15);
 	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-	font-size: 14px;
-	line-height: 1.42857143;
-	color: rgb(255, 255, 255);
+	font-size: 16px;
+	color: white;
+
+} 
+  
+  #top-bar {
+	margin-top: 28px;
+  }
+  
+  .spacing-reset {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	
+  }
+  
+  
+  @media (min-width: 1200px) {
+	.container {
+	  width: 990px;
+	}
+  }
+  
+  @media (min-width: 992px) {
+	.container {
+	  width: 990px;
+	}
+  }
+  
+  .enter_section {
+	margin-top: 30px;
+	margin-bottom: 30px;
+	/* text-align: center; */
+  }
+  
+  #enter_text {
+	width: 500px;
+	height: 40px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	margin: auto;
+	font-size: 16px;
+	
+  }
+  
+  .task {
+	border-style: solid;
+	border-width: 	10px;
+	
+  }
+  
+  .button-size {
+	padding-bottom: 20px;
+	
+  }
+
+  .btn-primary {
+	background-color: orangered;
+	border-color: orangered;
+}
+  
+  #text-enter-button {
+	margin-top: 10px;
+	margin-bottom: 18px;
+
+  }
+  
+  h1 {
+	color: yellow;
+  }
+  
+  pre {
+    display: block;
+    font-size: 14px;
+    color: white;
 }
