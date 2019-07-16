@@ -29,6 +29,53 @@ It's Burger Time! Eat-Da-Burger is a restaurant application that lets users inpu
    * express
 
 
+### Directory Structure
+
+Be sure to setup all the recommend files and directores .
+
+* Database Setup
+
+* Config Setup
+
+* Model Setup
+
+* Controller Setup
+
+* View Setup
+
+The steps above should look like the following structure below. 
+
+├── config
+│   ├── connection.js
+│   └── orm.js
+│ 
+├── controllers
+│   └── burgers_controller.js
+│
+├── db
+│   ├── schema.sql
+│   └── seeds.sql
+│
+├── models
+│   └── burger.js
+│ 
+├── node_modules
+│ 
+├── package.json
+│
+├── public
+│   └── assets
+│       ├── css
+│       │   └── burger_style.css
+│       └── img
+│           └── burger.png
+├── server.js
+│
+└── views
+    ├── index.handlebars
+    └── layouts
+        └── main.handlebars
+
 
 ### Technology Used
 
