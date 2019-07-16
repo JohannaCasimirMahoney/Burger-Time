@@ -69,12 +69,15 @@ The steps above should look like the following structure below.
 │       │   └── burger_style.css
 │       └── img
 │           └── burger.png
+│   
+│
 ├── server.js
 │
 └── views
     ├── index.handlebars
     └── layouts
         └── main.handlebars
+
 
 
 ### Technology Used
